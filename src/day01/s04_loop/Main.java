@@ -36,6 +36,11 @@ public class Main {
 //            System.out.print(num + " "); // 1 2 3 4 5
 //        }
 //        System.out.println();
+//
+//        int [] nums2 = {11, 12, 13, 14, 15};
+//        for (int i = 0; i < 5; i ++) {
+//            System.out.println(nums2[i] + " ");
+//        }
 
         // === 향상된 for문: 문자열 ===
 

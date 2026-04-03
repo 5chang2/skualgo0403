@@ -30,7 +30,7 @@ public class Main {
 //            System.out.print(part + " "); // a b c d
 //        }
 //        System.out.println();
-//
+
 //        String joined = String.join("-", parts);
 //        System.out.println(joined); // "a-b-c-d"
 //
@@ -68,9 +68,9 @@ public class Main {
 
         // === 팰린드롬 판별 ===
 
-//        String s = "abcba";
-//        String reversed = new StringBuilder(s).reverse().toString();
-//        System.out.println(s.equals(reversed)); // true
+        String s = "abcba";
+        String reversed = new StringBuilder(s).reverse().toString();
+        System.out.println(s.equals(reversed)); // true
 
         // === 투 포인터 팰린드롬 ===
 

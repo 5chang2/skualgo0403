@@ -46,7 +46,7 @@ public class Main {
         // === Arrays 유틸리티 ===
 
 //        // 정렬
-//        int[] arr = {5, 2, 8, 1, 4};
+        int[] arr = {5, 2, 8, 1, 4};
 //        Arrays.sort(arr);
 //        System.out.println(Arrays.toString(arr)); // [1, 2, 4, 5, 8]
 //
@@ -59,8 +59,8 @@ public class Main {
 //        System.out.println(Arrays.toString(arr)); // [0, 0, 0, 0, 0]
 //
 //        // 2차원 배열 출력
-//        int[][] grid = {{1, 2, 3}, {4, 5, 6}};
-//        System.out.println(Arrays.deepToString(grid)); // [[1, 2, 3], [4, 5, 6]]
+        int[][] grid = {{1, 2, 3}, {4, 5, 6}};
+        System.out.println(Arrays.deepToString(grid)); // [[1, 2, 3], [4, 5, 6]]
 //
 //        // 1차원 배열 값 비교
 //        int[] a = {1, 2, 3};
