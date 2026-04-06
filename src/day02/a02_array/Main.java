@@ -19,24 +19,24 @@ public class Main {
 //            }
 //        }
 
-        int[] arr = {2, 5, 3, 8, 1, 5};
-
-        for (int i = 0; i < arr.length; i++) {
-            boolean leftOk = true;
-            if (i > 0){
-                leftOk = arr[i] > arr[i-1];
-            }
-
-            boolean rightOk = true;
-            if (i < arr.length - 1) {
-                rightOk = arr[i] > arr[i+1];
-            }
-
-            if (leftOk && rightOk) {
-                System.out.print(arr[i]);
-            }
-
-        }
+//        int[] arr = {2, 5, 3, 8, 1, 5};
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            boolean leftOk = true;
+//            if (i > 0){
+//                leftOk = arr[i] > arr[i-1];
+//            }
+//
+//            boolean rightOk = true;
+//            if (i < arr.length - 1) {
+//                rightOk = arr[i] > arr[i+1];
+//            }
+//
+//            if (leftOk && rightOk) {
+//                System.out.print(arr[i]);
+//            }
+//
+//        }
 
 
 //            int[] arr = {4, 2, 1, 7, 4, 2};
@@ -75,6 +75,30 @@ public class Main {
 //            windowSum = windowSum - arr[i] + arr[i + K];
 //            maxSum = Math.max(maxSum, windowSum);
 //        }
+
+        int[][] grid = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        int r = 2, c = 2;
+        int N = 3 , M = 3;
+
+        int[] dr = {-1, 1, 0, 0};
+        int[] dc = {0, 0, -1, 1};
+
+        System.out.println("9의 이웃들");
+        for (int i = 0; i < 4; i++) {
+            int nr = r + dr[i];
+            int nc = c + dc[i];
+            // 범위체크 (배열 밖이면 스킵)
+            if (nr < 0 || nr >= N || nc < 0 || nc >= M) continue;
+            System.out.println(grid[nr][nc]);
+        }
+
+
+
 
 
 
