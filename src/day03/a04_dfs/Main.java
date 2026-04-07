@@ -1,23 +1,47 @@
 package day03.a04_dfs;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     static List<List<Integer>> graph;
     static boolean[] visited;
 
-    static void dfs(int node) {
-        visited[node] = true;
-        System.out.print(node);
+    // 재귀 방식의 dfs
+//    static void dfs(int node) {
+//        visited[node] = true;
+//        System.out.print(node);
+//
+//        // 현재노드(node)와 연결된 모든 이웃 노드를 확인
+//        for (int neighbor: graph.get(node)) {
+//            // 이전에 방문하지 않은 이웃이라면
+//            if (!visited[neighbor]) {
+//                dfs(neighbor);
+//            }
+//        }
+//    }
 
-        // 현재노드(node)와 연결된 모든 이웃 노드를 확인
-        for (int neighbor: graph.get(node)) {
-            // 이전에 방문하지 않은 이웃이라면
-            if (!visited[neighbor]) {
-                dfs(neighbor);
+    // stack 방식의 dfs
+    static void dfs(int start) {
+        ArrayDeque<Integer> stack = new ArrayDeque<>();
+        stack.push(start);
+        // 스택에 데이터가 있으면 계속 동작
+        while (!stack.isEmpty()) {
+            int node = stack.pop();
+
+            if (visited[node] == true) continue;
+            visited[node] = true;
+            System.out.print(node);
+
+            for (int neighbor: graph.get(node)) {
+                if (!visited[neighbor]) {
+                    stack.push(neighbor);
+                }
             }
         }
+
     }
 
     public static void main(String[] args) {
@@ -35,7 +59,7 @@ public class Main {
 
         // [false, false, false, false, false]
         visited = new boolean[n];
-        dfs(0);
+        dfs(1);
 
     }
 }
